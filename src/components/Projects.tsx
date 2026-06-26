@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 
 export interface Project {
   _id: string;
@@ -23,13 +22,13 @@ export default function Projects({ projects }: { projects?: Project[] }) {
   const items = projects && projects.length > 0 ? projects : fallbackProjects;
 
   return (
-    <div id="work" style={{ padding: "96px 64px", background: "#F7F7F5" }}>
+    <div id="work" className="projects-root">
       <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", marginBottom: 56 }}>
         <h2 style={{ fontWeight: 700, fontSize: 48, letterSpacing: "-0.03em", margin: 0 }}>Selected projects</h2>
         <div style={{ fontSize: 16, color: "#8a8a8a" }}>2024 — 2026</div>
       </div>
 
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 40 }}>
+      <div className="projects-grid">
         {items.map(project => (
           <a
             key={project._id}
@@ -43,9 +42,7 @@ export default function Projects({ projects }: { projects?: Project[] }) {
                 <img
                   src={project.imageUrl}
                   style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
+                    width: "100%", height: "100%", objectFit: "cover",
                     filter: hovered === project._id ? "grayscale(0)" : "grayscale(1)",
                     transform: hovered === project._id ? "scale(1.04)" : "scale(1)",
                     transition: "transform 0.6s ease, filter 0.5s ease",

@@ -10,8 +10,8 @@ export default async function Home() {
   const projects = await getProjects();
 
   return (
-    <div style={{ width: "100%", display: "flex", justifyContent: "center", background: "#E9E9E6" }}>
-      <div style={{ width: 1440, background: "#FFFFFF", color: "#0A0A0A", fontFamily: "'Hanken Grotesk', sans-serif" }}>
+    <div className="site-wrapper">
+      <div className="site-inner">
         <Nav />
         <Hero />
         <About />

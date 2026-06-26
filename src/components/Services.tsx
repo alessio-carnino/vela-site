@@ -13,22 +13,13 @@ export default function Services() {
   const [hovered, setHovered] = useState<number | null>(null);
 
   return (
-    <div id="services" style={{ padding: "96px 64px" }}>
-      <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", marginBottom: 56 }}>
+    <div id="services" className="services-root">
+      <div className="services-header">
         <div style={{ display: "flex", alignItems: "center", gap: 10, fontSize: 16 }}>
           <span style={{ width: 8, height: 8, borderRadius: "50%", background: "#7BB800", display: "inline-block" }} />
           Services
         </div>
-        <h2 style={{
-          fontWeight: 700,
-          fontSize: 44,
-          letterSpacing: "-0.03em",
-          maxWidth: 560,
-          textAlign: "right",
-          margin: 0,
-        }}>
-          Everything you need to go from idea to launch.
-        </h2>
+        <h2 className="services-headline">Everything you need to go from idea to launch.</h2>
       </div>
 
       <div>
@@ -36,10 +27,8 @@ export default function Services() {
           <a
             key={s.num}
             href="#"
+            className="service-row"
             style={{
-              display: "flex",
-              alignItems: "center",
-              gap: 40,
               padding: hovered === i ? "36px 8px 36px 24px" : "36px 8px",
               borderTop: "1px solid #e6e6e6",
               borderBottom: i === services.length - 1 ? "1px solid #e6e6e6" : "none",
@@ -51,12 +40,10 @@ export default function Services() {
             onMouseEnter={() => setHovered(i)}
             onMouseLeave={() => setHovered(null)}
           >
-            <span style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 16, color: "#7BB800", width: 48, flexShrink: 0 }}>
-              {s.num}
-            </span>
-            <span style={{ fontWeight: 700, fontSize: 44, letterSpacing: "-0.02em", flex: 1 }}>{s.title}</span>
-            <span style={{ fontSize: 16, lineHeight: 1.55, color: "#6c6c6c", width: 380, flexShrink: 0 }}>{s.desc}</span>
-            <span style={{ fontSize: 28, color: "#0A0A0A" }}>→</span>
+            <span style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 16, color: "#7BB800", width: 48, flexShrink: 0 }}>{s.num}</span>
+            <span className="service-title">{s.title}</span>
+            <span className="service-desc">{s.desc}</span>
+            <span className="service-arrow">→</span>
           </a>
         ))}
       </div>
