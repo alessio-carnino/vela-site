@@ -16,7 +16,7 @@ export default function Hero() {
           <p style={{ fontSize: 19, lineHeight: 1.6, color: "#5c5c5c", marginBottom: 40 }}>
             Vela is a small creative studio pairing design with no-code development. We craft websites that are sharp, intuitive, and built to convert — powered by Webflow and modern vibe-coding workflows.
           </p>
-          <div style={{ display: "flex", gap: 48 }}>
+          <div className="hero-stats">
             {[
               { value: "40+", label: "Projects shipped" },
               { value: "2 wks", label: "Avg. to launch" },

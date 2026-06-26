@@ -168,7 +168,8 @@ h1, h2, h3, h4, h5, h6, p { margin: 0; }
   .contact-title { font-size: 48px; }
 }
 
-/* ── Stats (no wrapping) ── */
+/* ── Stats ── */
+.hero-stats { display: flex; gap: 48px; }
 .hero-stat { white-space: nowrap; }
 
 /* ══════════════════════════════════
@@ -180,6 +181,7 @@ h1, h2, h3, h4, h5, h6, p { margin: 0; }
   .nav-links { display: none; }
   .nav-cta { height: 40px; }
   .nav-cta-label { height: 40px; font-size: 13px; padding: 0 18px; }
+  .hero-stats { flex-wrap: wrap; gap: 24px 40px; }
 
   /* Hero */
   .hero-root { padding: 48px 24px 40px; }
