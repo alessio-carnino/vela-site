@@ -24,22 +24,37 @@ export default function Contact() {
           </p>
         </div>
 
-        <a href="mailto:hello@vela.design" style={{
-          display: "inline-flex",
-          alignItems: "center",
-          gap: 12,
-          padding: "0 40px",
+        <a href="mailto:hello@vela.design" className="vela-contact-cta" style={{
+          display: "inline-block",
+          overflow: "hidden",
           height: 68,
           borderRadius: 40,
           background: "#C7F73E",
           textDecoration: "none",
-          color: "#0A0A0A",
-          fontSize: 19,
-          fontWeight: 600,
-          whiteSpace: "nowrap",
           flexShrink: 0,
         }}>
-          Let&apos;s build something <span style={{ fontSize: 22 }}>→</span>
+          <span className="vela-contact-inner" style={{
+            display: "flex",
+            flexDirection: "column",
+            transition: "transform 0.45s cubic-bezier(0.65,0,0.35,1)",
+          }}>
+            {[0, 1].map(i => (
+              <span key={i} style={{
+                height: 68,
+                display: "flex",
+                alignItems: "center",
+                gap: 12,
+                padding: "0 40px",
+                color: "#0A0A0A",
+                fontSize: 19,
+                fontWeight: 600,
+                whiteSpace: "nowrap",
+                flexShrink: 0,
+              }}>
+                Let&apos;s build something <span style={{ fontSize: 22 }}>→</span>
+              </span>
+            ))}
+          </span>
         </a>
       </div>
 
