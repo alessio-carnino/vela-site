@@ -22,7 +22,7 @@ export default function Hero() {
               { value: "2 wks", label: "Avg. to launch" },
               { value: "100%", label: "Built in-house" },
             ].map(stat => (
-              <div key={stat.label}>
+              <div key={stat.label} className="hero-stat">
                 <div style={{ fontWeight: 700, fontSize: 36, letterSpacing: "-0.02em" }}>{stat.value}</div>
                 <div style={{ fontSize: 14, color: "#8a8a8a" }}>{stat.label}</div>
               </div>

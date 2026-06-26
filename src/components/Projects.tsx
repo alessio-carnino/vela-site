@@ -23,7 +23,7 @@ export default function Projects({ projects }: { projects?: Project[] }) {
 
   return (
     <div id="work" className="projects-root">
-      <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", marginBottom: 56 }}>
+      <div className="projects-header" style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", marginBottom: 56 }}>
         <h2 style={{ fontWeight: 700, fontSize: 48, letterSpacing: "-0.03em", margin: 0 }}>Selected projects</h2>
         <div style={{ fontSize: 16, color: "#8a8a8a" }}>2024 — 2026</div>
       </div>

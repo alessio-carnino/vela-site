@@ -10,11 +10,10 @@ h1, h2, h3, h4, h5, h6, p { margin: 0; }
   width: 100%;
   display: flex;
   justify-content: center;
-  background: #E9E9E6;
+  background: #fff;
 }
 .site-inner {
   width: 100%;
-  max-width: 1440px;
   background: #fff;
   color: #0A0A0A;
   font-family: 'Hanken Grotesk', sans-serif;
@@ -169,6 +168,9 @@ h1, h2, h3, h4, h5, h6, p { margin: 0; }
   .contact-title { font-size: 48px; }
 }
 
+/* ── Stats (no wrapping) ── */
+.hero-stat { white-space: nowrap; }
+
 /* ══════════════════════════════════
    MOBILE  (≤ 768px)
 ══════════════════════════════════ */
@@ -176,6 +178,8 @@ h1, h2, h3, h4, h5, h6, p { margin: 0; }
   /* Nav */
   .nav-root { height: 68px; padding: 0 24px; }
   .nav-links { display: none; }
+  .nav-cta { height: 40px; }
+  .nav-cta-label { height: 40px; font-size: 13px; padding: 0 18px; }
 
   /* Hero */
   .hero-root { padding: 48px 24px 40px; }
@@ -202,10 +206,13 @@ h1, h2, h3, h4, h5, h6, p { margin: 0; }
   /* Projects */
   .projects-root { padding: 56px 24px; }
   .projects-grid { grid-template-columns: 1fr; gap: 32px; }
+  .projects-header { flex-direction: column; align-items: flex-start; gap: 8px; }
 
   /* Contact */
   .contact-root { padding: 24px; }
   .contact-card { flex-direction: column; align-items: flex-start; padding: 48px 32px; gap: 36px; }
   .contact-title { font-size: 36px; }
+  .contact-cta { height: 52px; }
+  .contact-cta-label { height: 52px; font-size: 16px; padding: 0 28px; }
   .footer-row { flex-direction: column; align-items: flex-start; gap: 20px; padding: 36px 0 8px; }
 }
