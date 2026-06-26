@@ -1,0 +1,47 @@
+.navLink {
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.navLink:hover {
+  color: #0A0A0A !important;
+}
+
+.ctaBtn {
+  display: inline-flex;
+  align-items: center;
+  overflow: hidden;
+  height: 48px;
+  border-radius: 40px;
+  background: #0A0A0A;
+  text-decoration: none;
+}
+.ctaBtn:hover .ctaInner {
+  transform: translateY(-50%);
+}
+
+.ctaInner {
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.45s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.ctaLabel {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 0 24px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #C7F73E;
+  display: inline-block;
+  flex-shrink: 0;
+}

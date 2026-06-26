@@ -1,0 +1,40 @@
+.ctaBtn {
+  display: inline-flex;
+  align-items: center;
+  overflow: hidden;
+  height: 68px;
+  border-radius: 40px;
+  background: #C7F73E;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.ctaBtn:hover .ctaInner {
+  transform: translateY(-50%);
+}
+
+.ctaInner {
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.45s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.ctaLabel {
+  height: 68px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 40px;
+  color: #0A0A0A;
+  font-size: 19px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.footerLink {
+  color: #8a8a8a;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.footerLink:hover {
+  color: #0A0A0A;
+}

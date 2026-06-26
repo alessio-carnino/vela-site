@@ -1,10 +1,6 @@
-"use client";
-
-import { useState } from "react";
+import styles from "./Contact.module.css";
 
 export default function Contact() {
-  const [ctaHovered, setCtaHovered] = useState(false);
-
   return (
     <div id="contact" style={{ padding: 64 }}>
       <div style={{
@@ -37,42 +33,10 @@ export default function Contact() {
           </p>
         </div>
 
-        <a
-          href="mailto:hello@vela.design"
-          style={{
-            display: "inline-flex",
-            alignItems: "center",
-            overflow: "hidden",
-            height: 68,
-            borderRadius: 40,
-            background: "#C7F73E",
-            textDecoration: "none",
-            flexShrink: 0,
-          }}
-          onMouseEnter={() => setCtaHovered(true)}
-          onMouseLeave={() => setCtaHovered(false)}
-        >
-          <span style={{
-            display: "flex",
-            flexDirection: "column",
-            transform: ctaHovered ? "translateY(-50%)" : "translateY(0)",
-            transition: "transform 0.45s cubic-bezier(0.65,0,0.35,1)",
-          }}>
+        <a href="mailto:hello@vela.design" className={styles.ctaBtn}>
+          <span className={styles.ctaInner}>
             {[0, 1].map(i => (
-              <span
-                key={i}
-                style={{
-                  height: 68,
-                  display: "flex",
-                  alignItems: "center",
-                  gap: 12,
-                  padding: "0 40px",
-                  color: "#0A0A0A",
-                  fontSize: 19,
-                  fontWeight: 600,
-                  whiteSpace: "nowrap",
-                }}
-              >
+              <span key={i} className={styles.ctaLabel}>
                 Let&apos;s build something <span style={{ fontSize: 22 }}>→</span>
               </span>
             ))}
@@ -91,12 +55,7 @@ export default function Contact() {
         <span>© 2026 Vela design</span>
         <div style={{ display: "flex", gap: 28 }}>
           {["Instagram", "Dribbble", "LinkedIn"].map(link => (
-            <a key={link} href="#" style={{ color: "#8a8a8a", textDecoration: "none" }}
-              onMouseEnter={e => (e.currentTarget.style.color = "#0A0A0A")}
-              onMouseLeave={e => (e.currentTarget.style.color = "#8a8a8a")}
-            >
-              {link}
-            </a>
+            <a key={link} href="#" className={styles.footerLink}>{link}</a>
           ))}
         </div>
       </div>
