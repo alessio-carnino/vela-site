@@ -26,7 +26,6 @@ export default function Contact() {
 
         <a href="mailto:hello@vela.design" className="vela-contact-cta" style={{
           display: "inline-flex",
-          alignItems: "center",
           overflow: "hidden",
           height: 68,
           borderRadius: 40,

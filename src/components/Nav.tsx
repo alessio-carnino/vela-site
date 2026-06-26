@@ -40,7 +40,6 @@ export default function Nav() {
 
         <a href="#contact" className="vela-cta" style={{
           display: "inline-flex",
-          alignItems: "center",
           overflow: "hidden",
           height: 48,
           borderRadius: 40,
