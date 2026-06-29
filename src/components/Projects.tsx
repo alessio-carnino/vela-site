@@ -6,6 +6,8 @@ export interface Project {
   _id: string;
   title: string;
   category: string;
+  tagline?: string;
+  slug?: string;
   imageUrl: string | null;
   url?: string;
 }
@@ -32,7 +34,7 @@ export default function Projects({ projects }: { projects?: Project[] }) {
         {items.map(project => (
           <a
             key={project._id}
-            href={project.url || "#"}
+            href={project.slug ? `/work/${project.slug}` : project.url || "#"}
             style={{ textDecoration: "none", color: "#0A0A0A" }}
             onMouseEnter={() => setHovered(project._id)}
             onMouseLeave={() => setHovered(null)}
