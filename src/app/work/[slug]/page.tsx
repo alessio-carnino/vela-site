@@ -28,7 +28,7 @@ export default async function ProjectPage({ params }: { params: { slug: string }
     );
   }
 
-  const imageUrl = project.image ? urlFor(project.image).width(1400).url() : null;
+  const imageUrl = project.image ? urlFor(project.image).url() : null;
 
   return (
     <div style={{ fontFamily: "'Hanken Grotesk', sans-serif", color: "#0A0A0A", background: "#fff", minHeight: "100vh" }}>
