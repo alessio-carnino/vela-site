@@ -13,7 +13,7 @@ export default function Contact() {
           </p>
         </div>
 
-        <a href="mailto:hello@vela.design" className="contact-cta">
+        <a href="/contact" className="contact-cta">
           <span className="contact-cta-inner">
             {[0, 1].map(i => (
               <span key={i} className="contact-cta-label">

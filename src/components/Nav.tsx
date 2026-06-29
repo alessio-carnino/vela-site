@@ -18,7 +18,7 @@ export default function Nav() {
         ))}
       </nav>
 
-      <a href="#contact" className="nav-cta">
+      <a href="/contact" className="nav-cta">
         <span className="nav-cta-inner">
           {[0, 1].map(i => (
             <span key={i} className="nav-cta-label">
