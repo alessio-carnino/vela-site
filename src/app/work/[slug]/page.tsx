@@ -1,6 +1,7 @@
 import { client, urlFor } from "@/sanity/client";
 import { PortableText } from "@portabletext/react";
 import Link from "next/link";
+import Contact from "@/components/Contact";
 
 async function getProject(slug: string) {
   if (!client) return null;
@@ -106,6 +107,25 @@ export default async function ProjectPage({ params }: { params: { slug: string }
           />
         </div>
       )}
+      {/* Footer */}
+      <div style={{ padding: "0 64px 48px" }}>
+        <Link
+          href="/#work"
+          style={{
+            display: "inline-flex",
+            alignItems: "center",
+            gap: 10,
+            textDecoration: "none",
+            color: "#0A0A0A",
+            fontSize: 16,
+            fontWeight: 500,
+            marginBottom: 48,
+          }}
+        >
+          ← Back to projects
+        </Link>
+      </div>
+      <Contact />
     </div>
   );
 }
