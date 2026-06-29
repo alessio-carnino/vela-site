@@ -63,9 +63,47 @@ export default async function ProjectPage({ params }: { params: { slug: string }
       {/* Content */}
       {project.content && (
         <div style={{ padding: "0 64px 120px", maxWidth: 760 }}>
-          <div style={{ fontSize: 18, lineHeight: 1.75, color: "#2a2a2a" }}>
-            <PortableText value={project.content} />
-          </div>
+          <PortableText
+            value={project.content}
+            components={{
+              block: {
+                normal: ({ children }) => (
+                  <p style={{ fontSize: 18, lineHeight: 1.8, color: "#3a3a3a", margin: "0 0 28px" }}>{children}</p>
+                ),
+                h2: ({ children }) => (
+                  <h2 style={{ fontWeight: 700, fontSize: 36, letterSpacing: "-0.02em", lineHeight: 1.1, margin: "64px 0 20px" }}>{children}</h2>
+                ),
+                h3: ({ children }) => (
+                  <h3 style={{ fontWeight: 700, fontSize: 24, letterSpacing: "-0.01em", lineHeight: 1.2, margin: "48px 0 16px" }}>{children}</h3>
+                ),
+                blockquote: ({ children }) => (
+                  <blockquote style={{ borderLeft: "3px solid #C7F73E", margin: "40px 0", paddingLeft: 28, fontSize: 20, color: "#5c5c5c", fontStyle: "italic" }}>{children}</blockquote>
+                ),
+              },
+              marks: {
+                strong: ({ children }) => <strong style={{ fontWeight: 700, color: "#0A0A0A" }}>{children}</strong>,
+                em: ({ children }) => <em style={{ fontStyle: "italic" }}>{children}</em>,
+                link: ({ children, value }) => (
+                  <a href={value?.href} target="_blank" rel="noopener noreferrer" style={{ color: "#0A0A0A", textDecoration: "underline", textUnderlineOffset: 3 }}>{children}</a>
+                ),
+              },
+              types: {
+                image: ({ value }) => (
+                  <div style={{ margin: "48px 0" }}>
+                    <img src={urlFor(value).url()} alt={value.alt || ""} style={{ width: "100%", borderRadius: 16, display: "block" }} />
+                  </div>
+                ),
+              },
+              list: {
+                bullet: ({ children }) => <ul style={{ margin: "0 0 28px", paddingLeft: 24, fontSize: 18, lineHeight: 1.8, color: "#3a3a3a" }}>{children}</ul>,
+                number: ({ children }) => <ol style={{ margin: "0 0 28px", paddingLeft: 24, fontSize: 18, lineHeight: 1.8, color: "#3a3a3a" }}>{children}</ol>,
+              },
+              listItem: {
+                bullet: ({ children }) => <li style={{ marginBottom: 8 }}>{children}</li>,
+                number: ({ children }) => <li style={{ marginBottom: 8 }}>{children}</li>,
+              },
+            }}
+          />
         </div>
       )}
     </div>
